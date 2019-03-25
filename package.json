@@ -10,6 +10,7 @@
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.1",
+    "react-native-config": "0.11.7",
     "react-native-gesture-handler": "1.1.0",
     "react-native-map-clustering": "1.3.2",
     "react-native-maps": "0.23.0",

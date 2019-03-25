@@ -57,3 +57,6 @@ buck-out/
 
 # ios
 */Pods
+
+# env var
+.env
