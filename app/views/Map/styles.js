@@ -1,7 +1,5 @@
 import styled from 'styled-components/native'
 
-export const MapView = styled.View`
-  align-items: center;
+export const View = styled.View`
   flex: 1;
-  justify-content: center;
 `
