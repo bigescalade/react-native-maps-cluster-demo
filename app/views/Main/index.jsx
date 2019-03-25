@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Map from '../Map'
+import TabNavigator from '../../Routes/index'
 import * as styles from './styles'
 
 const Main = () => {
   const { MainView } = styles
   return (
     <MainView>
-      <Map />
+      <TabNavigator />
     </MainView>
   )
 }
