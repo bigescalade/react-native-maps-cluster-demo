@@ -4,6 +4,7 @@ import { createAppContainer, createBottomTabNavigator } from 'react-navigation'
 
 import colors from '../styles/colors'
 import Map from '../views/Map'
+import Native from '../views/Native'
 
 const iconSize = 20
 
@@ -33,7 +34,7 @@ const TabNavigator = createBottomTabNavigator(
         ),
         tabBarLabel: 'Native View',
       },
-      screen: Map,
+      screen: Native,
     },
   },
   {

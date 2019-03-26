@@ -39,6 +39,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* RNMapsClusterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNMapsClusterTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		4022EBC622498DD100440953 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4022EBC222498D9E00440953 /* libReactNativeConfig.a */; };
+		4043C527224A13B3001A1F2E /* NativeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4043C526224A13B3001A1F2E /* NativeView.m */; };
+		40E6ED75224A2AF20044DE52 /* NativeViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E6ED74224A2AF20044DE52 /* NativeViewManager.m */; };
 		508254951ADD444C871E8E31 /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F563CE251C446659038BC7C /* libRNVectorIcons-tvOS.a */; };
 		5BFF502939114FFF88D29EC0 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4726CEC4C3AD4A97ADA20927 /* EvilIcons.ttf */; };
 		6D8B3CCD65BF49E3B8915CEE /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 396B8A8934B849C6959DBD60 /* Feather.ttf */; };
@@ -414,6 +416,9 @@
 		396B8A8934B849C6959DBD60 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		3FBEE45EAF83404E87976DAC /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		4022EBBC22498D9E00440953 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
+		4043C526224A13B3001A1F2E /* NativeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeView.m; sourceTree = "<group>"; };
+		4043C528224A13E4001A1F2E /* NativeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeView.h; sourceTree = "<group>"; };
+		40E6ED74224A2AF20044DE52 /* NativeViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeViewManager.m; sourceTree = "<group>"; };
 		4726CEC4C3AD4A97ADA20927 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		4CE81FADD31A4FE5A8F580BA /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		571DE645786A170F2DC38B27 /* Pods-RNMapsCluster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNMapsCluster.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNMapsCluster/Pods-RNMapsCluster.release.xcconfig"; sourceTree = "<group>"; };
@@ -581,6 +586,7 @@
 		13B07FAE1A68108700A75B9A /* RNMapsCluster */ = {
 			isa = PBXGroup;
 			children = (
+				40E6ED77224A2B030044DE52 /* NativeView */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -671,6 +677,16 @@
 				40BEEE392248D551008C3E64 /* libRNVectorIcons-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		40E6ED77224A2B030044DE52 /* NativeView */ = {
+			isa = PBXGroup;
+			children = (
+				4043C526224A13B3001A1F2E /* NativeView.m */,
+				4043C528224A13E4001A1F2E /* NativeView.h */,
+				40E6ED74224A2AF20044DE52 /* NativeViewManager.m */,
+			);
+			path = NativeView;
 			sourceTree = "<group>";
 		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
@@ -1400,6 +1416,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				4043C527224A13B3001A1F2E /* NativeView.m in Sources */,
+				40E6ED75224A2AF20044DE52 /* NativeViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
