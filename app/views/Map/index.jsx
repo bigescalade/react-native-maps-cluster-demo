@@ -2,7 +2,6 @@ import React from 'react'
 import MapView from 'react-native-map-clustering'
 import { Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 
-import places from '../../helpers/places'
 import * as styles from './styles'
 
 const Map = () => {
@@ -10,7 +9,7 @@ const Map = () => {
     flex: 1,
   }
 
-  const randomNumberGenerator = (min, max) => (Math.random() * (max - min) + min).toFixed(6)
+  const randomNumberGenerator = (min, max) => Math.random() * (max - min) + min
 
   const createMarkers = () => {
     const arr = []
@@ -39,7 +38,8 @@ const Map = () => {
     <View>
       <MapView
         clustering
-        // provider={PROVIDER_GOOGLE}
+        provider={PROVIDER_GOOGLE}
+        radius={20}
         region={{
           latitude: -37.813629,
           longitude: 144.963058,
