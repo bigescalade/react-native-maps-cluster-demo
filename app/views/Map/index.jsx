@@ -10,6 +10,30 @@ const Map = () => {
     flex: 1,
   }
 
+  const randomNumberGenerator = (min, max) => (Math.random() * (max - min) + min).toFixed(6)
+
+  const createMarkers = () => {
+    const arr = []
+    const latMin = -37.84
+    const latMax = -37.79
+    const longMin = 144.94
+    const longMax = 144.99
+
+    for (let i = 0; i < 100; i += 1) {
+      arr.push(
+        <Marker
+          coordinate={{
+            latitude: randomNumberGenerator(latMin, latMax),
+            longitude: randomNumberGenerator(longMin, longMax),
+          }}
+          cluster
+        />,
+      )
+    }
+
+    return arr
+  }
+
   const { View } = styles
   return (
     <View>
@@ -24,9 +48,7 @@ const Map = () => {
         }}
         style={mapStyle}
       >
-        {places.map(place => (
-          <Marker coordinate={{ latitude: place.lat, longitude: place.long }} cluster />
-        ))}
+        {createMarkers()}
       </MapView>
     </View>
   )
