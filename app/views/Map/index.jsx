@@ -21,11 +21,12 @@ const Map = () => {
     for (let i = 0; i < 100; i += 1) {
       arr.push(
         <Marker
+          cluster
           coordinate={{
             latitude: randomNumberGenerator(latMin, latMax),
             longitude: randomNumberGenerator(longMin, longMax),
           }}
-          cluster
+          key={`marker_${i.toString()}`}
         />,
       )
     }

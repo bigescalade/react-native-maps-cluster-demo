@@ -12,10 +12,11 @@
 
 - (id) initWithFrame:(CGRect)frame {
   if ((self = [super initWithFrame:frame])) {
-    UILabel *label = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 200, 50)];
-    label.text = @"iOS View Controller";
+    UILabel *label = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 300, 50)];
+    label.center = self.center;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"I'm written in objective-c!";
     label.textColor = [UIColor blackColor];
-    label.backgroundColor = [UIColor blackColor];
     [self addSubview:label];
   }
   

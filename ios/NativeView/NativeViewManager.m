@@ -17,7 +17,7 @@
 RCT_EXPORT_MODULE(NativeView)
 
 - (UIView *)view {
-  return [[NativeView alloc] init];
+  return [[NativeView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height)];
 }
 
 @end
