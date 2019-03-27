@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation'
 
@@ -8,30 +9,34 @@ import Native from '../views/Native'
 
 const iconSize = 20
 
+const mapIcon = ({ focused }) => (
+  <MaterialCommunityIcons
+    color={focused ? colors.primary : colors.gray}
+    name="map-marker-circle"
+    size={iconSize}
+  />
+)
+
+const nativeIcon = ({ focused }) => (
+  <MaterialCommunityIcons
+    color={focused ? colors.primary : colors.gray}
+    name="view-dashboard-outline"
+    size={iconSize}
+  />
+)
+
 const TabNavigator = createBottomTabNavigator(
   {
     Tab1: {
       navigationOptions: {
-        tabBarIcon: ({ focused }) => (
-          <MaterialCommunityIcons
-            color={focused ? colors.primary : colors.gray}
-            name="map-marker-circle"
-            size={iconSize}
-          />
-        ),
+        tabBarIcon: mapIcon,
         tabBarLabel: 'Map',
       },
       screen: Map,
     },
     Tab2: {
       navigationOptions: {
-        tabBarIcon: ({ focused }) => (
-          <MaterialCommunityIcons
-            color={focused ? colors.primary : colors.gray}
-            name="receipt"
-            size={iconSize}
-          />
-        ),
+        tabBarIcon: nativeIcon,
         tabBarLabel: 'Native View',
       },
       screen: Native,
@@ -47,3 +52,11 @@ const TabNavigator = createBottomTabNavigator(
 )
 
 export default createAppContainer(TabNavigator)
+
+mapIcon.propTypes = {
+  focused: PropTypes.bool.isRequired,
+}
+
+nativeIcon.propTypes = {
+  focused: PropTypes.bool.isRequired,
+}

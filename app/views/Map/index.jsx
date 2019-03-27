@@ -2,24 +2,26 @@ import React from 'react'
 import MapView from 'react-native-map-clustering'
 import { Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 
-import * as styles from './styles'
+import View from './styles'
 
 const Map = () => {
-  const mapStyle = {
-    flex: 1,
+  const inlineStyles = {
+    mapStyles: {
+      flex: 1,
+    },
   }
 
   const randomNumberGenerator = (min, max) => Math.random() * (max - min) + min
 
   const createMarkers = () => {
-    const arr = []
+    const markerArray = []
     const latMin = -37.84
     const latMax = -37.79
     const longMin = 144.94
     const longMax = 144.99
 
     for (let i = 0; i < 100; i += 1) {
-      arr.push(
+      markerArray.push(
         <Marker
           cluster
           coordinate={{
@@ -31,10 +33,9 @@ const Map = () => {
       )
     }
 
-    return arr
+    return markerArray
   }
 
-  const { View } = styles
   return (
     <View>
       <MapView
@@ -47,7 +48,7 @@ const Map = () => {
           latitudeDelta: 0.05,
           longitudeDelta: 0.05,
         }}
-        style={mapStyle}
+        style={inlineStyles.mapStyles}
       >
         {createMarkers()}
       </MapView>

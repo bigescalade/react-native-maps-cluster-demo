@@ -1,5 +1,7 @@
 import styled from 'styled-components/native'
 
-export const MainView = styled.View`
+const View = styled.View`
   flex: 1;
 `
+
+export default View

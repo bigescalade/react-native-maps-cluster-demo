@@ -1,15 +1,12 @@
 import React from 'react'
 
 import TabNavigator from '../../Routes/index'
-import * as styles from './styles'
+import View from './styles'
 
-const Main = () => {
-  const { MainView } = styles
-  return (
-    <MainView>
-      <TabNavigator />
-    </MainView>
-  )
-}
+const Main = () => (
+  <View>
+    <TabNavigator />
+  </View>
+)
 
 export default Main
