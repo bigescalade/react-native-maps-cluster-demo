@@ -27,6 +27,10 @@
 5.  In project root `react-native run-ios`
     - command + D for dev tools
 
+### iOS quirks
+
+1. If you receive the error `'GeneratedDotEnv.m' file not found` remove the following line from the Podfile `pod 'react-native-config', :path => '../node_modules/react-native-config'`
+
 ### Android
 
 1.  Download [Android Studio](https://developer.android.com/studio/ 'Download Android Studio')
@@ -51,3 +55,4 @@
 
 1. Device/emulator MUST have Google Apps package installed or the Map view will not work
 2. At the time of writing, React Native must use version 8 JDK, anything higher is not supported and may not work. [You can download JDK 8 from here](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+3. If you receive the error (or similar) `Unable to resolve dependency for ':react-native-maps@debug/compileClasspath': Could not resolve com.android.support:support-compat:25.2.0.` while building Android, add the following to react-native-maps build.gradle file `implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"`
