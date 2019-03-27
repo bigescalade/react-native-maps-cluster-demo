@@ -5,6 +5,7 @@ import android.app.Application;
 import com.facebook.react.ReactApplication;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.rnmapscluster.NativeView.NativeViewPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -30,7 +31,8 @@ public class MainApplication extends Application implements ReactApplication {
           new ReactNativeConfigPackage(),
           new VectorIconsPackage(),
           new RNGestureHandlerPackage(),
-          new MapsPackage()
+          new MapsPackage(),
+          new NativeViewPackage()
       );
     }
 
